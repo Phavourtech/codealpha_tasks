@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #0b0b0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.app {
+  width: 100%;
+  max-width: 460px;
+}
+
+.calculator-app {
+  width: 100%;
+  min-height: calc(100dvh - 20px);
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7);
+}
+
+.menu-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  background: #1c1c1e;
+  padding: 7px;
+  border-radius: 22px;
+  margin-bottom: 10px;
+}
+
+.menu-btn {
+  border: none;
+  background: transparent;
+  color: #8e8e93;
+  padding: 9px 6px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.menu-btn.active {
+  background: #ff9f0a;
+  color: #000;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.display {
+  min-height: clamp(88px, 19dvh, 135px);
+  padding: 6px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.display span {
+  min-height: 22px;
+  color: #8e8e93;
+  font-size: 0.9rem;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.display strong {
+  font-size: clamp(2.25rem, 13vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(7px, 2vw, 11px);
+}
+
+.btn {
+  height: clamp(50px, 13.5dvh, 72px);
+  max-height: 72px;
+  border: none;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: clamp(1.05rem, 5vw, 1.4rem);
+  font-weight: 500;
+  transition: 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+.utility {
+  background: #a5a5a5;
+  color: #000;
+}
+
+.operator {
+  background: #ff9f0a;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 999px;
+  text-align: left;
+  padding-left: 24px;
+}
+
+.scientific-grid .btn {
+  height: clamp(38px, 8.3dvh, 54px);
+  border-radius: 15px;
+  font-size: clamp(0.75rem, 3.5vw, 1rem);
+}
+
+.scientific-grid .zero {
+  text-align: center;
+  padding-left: 0;
+}
+
+.tool-card {
+  background: #1c1c1e;
+  border: 1px solid #2c2c2e;
+  border-radius: 22px;
+  padding: 14px;
+}
+
+.tool-card h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #2c2c2e;
+  color: #fff;
+  padding: 11px;
+  border-radius: 13px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.conversion-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.primary-btn {
+  width: 100%;
+  border: none;
+  background: #ff9f0a;
+  color: #000;
+  padding: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-card {
+  background: #000;
+  border-radius: 15px;
+  padding: 13px;
+}
+
+.result-card span,
+#noteStatus {
+  display: block;
+  color: #8e8e93;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.result-card strong {
+  font-size: 1.7rem;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+textarea {
+  min-height: calc(100dvh - 220px);
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.history-header h2 {
+  margin-bottom: 0;
+}
+
+#clearHistory {
+  border: none;
+  background: #2c2c2e;
+  color: #ff9f0a;
+  padding: 8px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.history-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  max-height: calc(100dvh - 150px);
+  overflow-y: auto;
+}
+
+.history-list li {
+  background: #2c2c2e;
+  color: #d1d1d6;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+@media (max-width: 360px) {
+  body {
+    padding: 6px;
+  }
+
+  .calculator-app {
+    min-height: calc(100dvh - 12px);
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .menu-bar {
+    gap: 5px;
+    padding: 5px;
+    margin-bottom: 8px;
+  }
+
+  .menu-btn {
+    font-size: 0.7rem;
+    padding: 8px 4px;
+  }
+
+  .display {
+    min-height: 80px;
+    padding-bottom: 8px;
+  }
+
+  .buttons {
+    gap: 6px;
+  }
+
+  .btn {
+    height: clamp(44px, 12.5dvh, 58px);
+  }
+
+  .scientific-grid .btn {
+    height: clamp(34px, 7.6dvh, 46px);
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ugochukwu Favour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Ugochukwu Favour home">
+      <span>UF</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+  <span class="menu-text">Menu</span>
+  <span class="menu-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-panel">
+      <div>
+        <p class="section-label">Contact</p>
+        <h1>Let us discuss a frontend project, internship opportunity, or web collaboration.</h1>
+        <p>
+          I am open to junior frontend roles, internships, freelance website projects,
+          remote frontend opportunities, and selected research or AI quality review work.
+        </p>
+
+        <div class="contact-links simple-contact-links">
+          <a href="mailto:hinazago@gmail.com" class="contact-link">
+            <strong>Email</strong>
+          </a>
+
+          <a href="https://github.com/Phavourtech" target="_blank" class="contact-link">
+            <strong>GitHub</strong>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ugochukwu-favour-603140331" target="_blank" class="contact-link">
+            <strong>LinkedIn</strong>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label for="senderName">Your Name</label>
+        <input type="text" id="senderName" placeholder="Enter your name" required>
+
+        <label for="senderEmail">Your Email</label>
+        <input type="email" id="senderEmail" placeholder="Enter your email address" required>
+
+        <label for="emailSubject">Subject</label>
+        <input type="text" id="emailSubject" placeholder="What would you like to discuss?" required>
+
+        <label>Message</label>
+
+        <div class="editor-toolbar">
+          <button type="button" data-command="bold"><strong>B</strong></button>
+          <button type="button" data-command="italic"><em>I</em></button>
+          <button type="button" data-command="insertUnorderedList">• List</button>
+          <button type="button" data-command="insertOrderedList">1. List</button>
+
+          <select id="emojiPicker" aria-label="Choose emoji">
+            <option value="">Emoji</option>
+            <option value="😊">😊 Smile</option>
+            <option value="✨">✨ Sparkle</option>
+            <option value="💼">💼 Work</option>
+            <option value="📌">📌 Pin</option>
+            <option value="📎">📎 Attachment</option>
+            <option value="🚀">🚀 Launch</option>
+            <option value="💡">💡 Idea</option>
+            <option value="✅">✅ Done</option>
+            <option value="🤝">🤝 Collaborate</option>
+            <option value="📚">📚 Study</option>
+            <option value="📝">📝 Writing</option>
+            <option value="🎯">🎯 Goal</option>
+            <option value="📅">📅 Date</option>
+            <option value="⭐">⭐ Important</option>
+          </select>
+
+          <label class="file-button">
+            Attach file
+            <input type="file" id="fileInput" hidden>
+          </label>
+        </div>
+
+        <div
+          class="message-editor"
+          id="messageEditor"
+          contenteditable="true"
+          data-placeholder="Write your message here..."
+        ></div>
+
+        <p class="file-note" id="fileNote"></p>
+
+        <button type="submit" class="btn primary-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ugochukwu Favour. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

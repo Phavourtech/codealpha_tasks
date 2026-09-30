@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeAlpha Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Visual Art Gallery</h1>
+    <p>A curated collection of expressive portraits, fine art, natural scenes, and lifestyle moments.</p>
+  </header>
+
+  <main>
+    <section class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="art">Fine Art</button>
+      <button class="filter-btn" data-filter="portrait">Portraits</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery-item" data-category="art">
+        <img src="images/amazing.jpeg" alt="Classic art collage" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/beautiful eyes.jpeg" alt="Colorful eye artwork" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/beautiful.jpeg" alt="Minimal stairway artwork" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/cool.jpeg" alt="Expressionist painting" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/creative.jpeg" alt="Colorful forest painting" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/dance.jpeg" alt="Dancer artwork" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/exciting.jpeg" alt="Abstract eye painting" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/fineart.webp" alt="Street art portrait painting" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/gauguin.jpg" alt="Still life painting" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/hellyer.jpeg" alt="Island landscape painting" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/landscape.jpeg" alt="Painted landscape" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/nature.jpeg" alt="Pointillist park painting" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/spiritual eyes.jpeg" alt="Spiritual eyes artwork" />
+      </div>
+
+      <div class="gallery-item" data-category="art">
+        <img src="images/visual art.jpeg" alt="Colorful mural artwork" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/face art.jpeg" alt="Painted face portrait" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/facial.jpeg" alt="Buddha face portrait" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/fine face.jpeg" alt="Abstract profile portrait" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/good.jpeg" alt="Floral fashion portrait" />
+      </div>
+
+      <div class="gallery-item" data-category="portrait">
+        <img src="images/sideview.jpeg" alt="Side profile portrait" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/clash.avif" alt="Mountain cabin landscape" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/path.avif" alt="Moonlit forest path" />
+      </div>
+
+      <div class="gallery-item" data-category="nature">
+        <img src="images/view.jpg" alt="Waterfront evening view" />
+      </div>
+
+      <div class="gallery-item" data-category="lifestyle">
+        <img src="images/catlike.jpeg" alt="Colorful cat illustration" />
+      </div>
+
+      <div class="gallery-item" data-category="lifestyle">
+        <img src="images/houses.jpeg" alt="Colorful city houses" />
+      </div>
+
+      <div class="gallery-item" data-category="lifestyle">
+        <img src="images/indexMain1.jpg" alt="Live music performance" />
+      </div>
+
+      <div class="gallery-item" data-category="lifestyle">
+        <img src="images/shopping.webp" alt="Stylized shopping scene" />
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

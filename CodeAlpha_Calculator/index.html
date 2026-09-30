@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="calculator-app">
+      <nav class="menu-bar">
+        <button class="menu-btn active" data-page="basicPage">Basic</button>
+        <button class="menu-btn" data-page="scientificPage">Scientific</button>
+        <button class="menu-btn" data-page="converterPage">Converter</button>
+        <button class="menu-btn" data-page="notesPage">Math Notes</button>
+        <button class="menu-btn" data-page="historyPage">History</button>
+      </nav>
+
+      <section class="page active" id="basicPage">
+        <div class="display">
+          <span id="historyLine"></span>
+          <strong id="displayValue">0</strong>
+        </div>
+
+        <div class="buttons">
+          <button class="btn utility" data-action="clear">AC</button>
+          <button class="btn utility" data-action="delete">DEL</button>
+          <button class="btn utility" data-value="%">%</button>
+          <button class="btn operator" data-value="/">÷</button>
+
+          <button class="btn" data-value="7">7</button>
+          <button class="btn" data-value="8">8</button>
+          <button class="btn" data-value="9">9</button>
+          <button class="btn operator" data-value="*">×</button>
+
+          <button class="btn" data-value="4">4</button>
+          <button class="btn" data-value="5">5</button>
+          <button class="btn" data-value="6">6</button>
+          <button class="btn operator" data-value="-">−</button>
+
+          <button class="btn" data-value="1">1</button>
+          <button class="btn" data-value="2">2</button>
+          <button class="btn" data-value="3">3</button>
+          <button class="btn operator" data-value="+">+</button>
+
+          <button class="btn" data-action="toggle-sign">+/-</button>
+          <button class="btn" data-value="0">0</button>
+          <button class="btn" data-value=".">.</button>
+          <button class="btn operator" data-action="calculate">=</button>
+        </div>
+      </section>
+
+      <section class="page" id="scientificPage">
+        <div class="display">
+          <span id="scienceHistory"></span>
+          <strong id="scienceDisplay">0</strong>
+        </div>
+
+        <div class="buttons scientific-grid">
+          <button class="btn utility science" data-science="clear">AC</button>
+          <button class="btn utility science" data-science="delete">DEL</button>
+          <button class="btn science" data-science="sqrt">√</button>
+          <button class="btn operator science" data-science="/">÷</button>
+
+          <button class="btn science" data-science="sin">sin</button>
+          <button class="btn science" data-science="cos">cos</button>
+          <button class="btn science" data-science="tan">tan</button>
+          <button class="btn operator science" data-science="*">×</button>
+
+          <button class="btn science" data-science="log">log</button>
+          <button class="btn science" data-science="ln">ln</button>
+          <button class="btn science" data-science="square">x²</button>
+          <button class="btn operator science" data-science="-">−</button>
+
+          <button class="btn science" data-science="π">π</button>
+          <button class="btn science" data-science="(">(</button>
+          <button class="btn science" data-science=")">)</button>
+          <button class="btn operator science" data-science="+">+</button>
+
+          <button class="btn science" data-science="7">7</button>
+          <button class="btn science" data-science="8">8</button>
+          <button class="btn science" data-science="9">9</button>
+          <button class="btn operator science" data-science="calculate">=</button>
+
+          <button class="btn science" data-science="4">4</button>
+          <button class="btn science" data-science="5">5</button>
+          <button class="btn science" data-science="6">6</button>
+          <button class="btn science" data-science=".">.</button>
+
+          <button class="btn science" data-science="1">1</button>
+          <button class="btn science" data-science="2">2</button>
+          <button class="btn science" data-science="3">3</button>
+          <button class="btn zero science" data-science="0">0</button>
+        </div>
+      </section>
+
+      <section class="page" id="converterPage">
+        <div class="tool-card">
+          <h2>Converter</h2>
+
+          <select id="convertType">
+            <option value="currency">Currency</option>
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+          </select>
+
+          <input type="number" id="convertValue" placeholder="Enter value" />
+
+          <div class="conversion-row">
+            <select id="fromUnit"></select>
+            <select id="toUnit"></select>
+          </div>
+
+          <button class="primary-btn" id="convertBtn">Convert</button>
+
+          <div class="result-card">
+            <span>Result</span>
+            <strong id="convertResult">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="notesPage">
+        <div class="tool-card">
+          <h2>Math Notes</h2>
+          <textarea id="mathNotes" placeholder="Write formulas, reminders, or rough calculations..."></textarea>
+          <button class="primary-btn" id="saveNotes">Save Note</button>
+          <p id="noteStatus">Ready</p>
+        </div>
+      </section>
+
+      <section class="page" id="historyPage">
+        <div class="tool-card">
+          <div class="history-header">
+            <h2>History</h2>
+            <button id="clearHistory">Clear</button>
+          </div>
+
+          <ul id="historyList" class="history-list">
+            <li>No calculations yet</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
